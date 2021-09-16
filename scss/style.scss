@@ -1,0 +1,226 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    margin: 0;
+    overflow: 0;
+}
+a {
+    text-decoration: none;
+    border: 0;
+    color: white;
+}
+p {
+    font-weight: 100;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    background-color: black;
+    color: white;
+}
+nav {
+    height: 40px;
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    img {
+        margin-top: 10px;
+    }
+    .banner {
+        margin-left: 80px;
+        ul {
+            margin-top: 8px;
+            a {
+                .contact {
+                    background-color: white;
+                    color: black;
+                    transition: all 0.3s 0s ease;
+                }
+                .contact:hover {
+                    background-color: rgb(73, 73, 73);
+                    color: white;
+                }
+            }
+            display: flex;
+            li {
+                font-weight: 600;
+                padding: 0 24px;
+                line-height: 32px;
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 880px;
+    .main {
+        height: 880px;
+        line-height: 0.8;
+        position: relative;
+        .me_2 {
+            display: none;
+        }
+        h1 {
+            font-size: 88px;
+        }
+
+        @keyframes down {
+            0% {
+                top: 25%;
+            }
+            10% {
+                top: 33%;
+            }
+            25% {
+                top: 30%;
+            }
+            38% {
+                top: 33%;
+            }
+            39% {
+                top: 33%;
+            }
+            100% {
+                top: 25%;
+            }
+        }
+        .down {
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            animation: down 2s infinite;
+            i {
+                font-size: 40px;
+            }
+        }
+    }
+    .intro {
+        display: flex;
+        justify-content: space-evenly;
+        .intro_left {
+            padding-top: 16px;
+            width: 400px;
+        }
+        .intro_right {
+            position: relative;
+            p {
+                width: 560px;
+                line-height: 1.5;
+                padding: 0;
+                margin: 0;
+                font-size: 32px;
+                margin-bottom: 48px;
+            }
+            a {
+                color: rgb(126, 126, 126);
+                font-size: 24px;
+                margin-left: 58px;
+                height: 40px;
+                line-height: 40px;
+                transition: all 0.5s 0s ease;
+
+                .dot {
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 0px;
+                    left: -0px;
+                    width: 32px;
+                    height: 32px;
+                    border: rgb(196, 196, 196) solid 2px;
+                    border-radius: 50%;
+                    transition: all 0.5s 0s ease;
+                    cursor: initial;
+                }
+            }
+            a:hover {
+                color: white;
+                text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
+
+                .dot {
+                    border-radius: 48px;
+                    width: 256px;
+                    cursor: pointer;
+                    border: rgb(255, 255, 255) solid 2px;
+                }
+            }
+        }
+    }
+    .skills {
+        margin-top: 160px;
+        ul {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-bottom: 32px;
+                padding: 8px 16px;
+                margin-right: 16px;
+                border: rgb(53, 53, 53) solid 0.2px;
+                transition: all 0.3s 0s ease;
+                color: gray;
+            }
+            li:hover {
+                cursor: pointer;
+                background-color: rgb(73, 73, 73);
+                color: white;
+                text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
+            }
+        }
+        .-end {
+            margin: 48px 0;
+        }
+    }
+    .projects {
+        margin-top: 160px;
+        li {
+            margin: 64px 0;
+            max-height: 400px;
+            object-fit: cover;
+            .project {
+                position: relative;
+                top: 0;
+                text-align: left;
+                width: 300px;
+                padding: 0 24px;
+                p {
+                    font-size: 20px;
+                }
+                a {
+                    color: gray;
+                    font-size: 16px;
+                    transition: all 0.5s 0s ease;
+                    border-bottom: gray solid 2px;
+                }
+                a:hover {
+                    border-bottom: rgb(253, 253, 253) 2px solid;
+                    color: white;
+                    text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
+                }
+            }
+        }
+
+        .pic_right {
+            display: flex;
+            justify-content: space-between;
+            img {
+                max-width: 520px;
+                object-fit: cover;
+            }
+        }
+        .pic_left {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            img {
+                max-width: 520px;
+                object-fit: cover;
+            }
+        }
+    }
+}
