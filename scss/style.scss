@@ -6,6 +6,7 @@ li {
     list-style: none;
     margin: 0;
     overflow: 0;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
@@ -22,18 +23,25 @@ body {
     background-color: black;
     color: white;
 }
+
 nav {
+    z-index: 1;
+    position: fixed;
+    top: -50;
     height: 40px;
+    width: 100%;
     display: flex;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: space-evenly;
+    transition: top 0.3s;
+
     img {
         margin-top: 10px;
     }
     .banner {
-        margin-left: 80px;
+        margin-left: 340px;
+        margin-top: 0;
         ul {
-            margin-top: 8px;
             a {
                 .contact {
                     background-color: white;
@@ -47,10 +55,16 @@ nav {
             }
             display: flex;
             li {
+                height: 40px;
                 font-weight: 600;
                 padding: 0 24px;
-                line-height: 32px;
+                line-height: 40px;
                 font-size: 8px;
+                transition: all 0.3s 0s ease;
+            }
+            li:hover {
+                color: black;
+                background-color: rgb(73, 73, 73);
             }
         }
     }
@@ -58,11 +72,18 @@ nav {
 
 .container {
     margin: 0 auto;
-    width: 880px;
+    width: 960px;
     .main {
         height: 880px;
         line-height: 0.8;
         position: relative;
+        img {
+            right: 120px;
+            bottom: 240px;
+            position: absolute;
+            object-fit: cover;
+            width: 300px;
+        }
         .me_2 {
             display: none;
         }
@@ -178,6 +199,9 @@ nav {
     }
     .projects {
         margin-top: 160px;
+        h3 {
+            margin: 0;
+        }
         li {
             margin: 64px 0;
             max-height: 400px;
@@ -191,15 +215,16 @@ nav {
                 p {
                     font-size: 20px;
                 }
+
                 a {
                     color: gray;
-                    font-size: 16px;
+                    padding: 8px 0px;
+                    border-bottom: 1px solid gray;
                     transition: all 0.5s 0s ease;
-                    border-bottom: gray solid 2px;
                 }
                 a:hover {
-                    border-bottom: rgb(253, 253, 253) 2px solid;
                     color: white;
+                    border-bottom: 1px solid rgb(255, 255, 255);
                     text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
                 }
             }
@@ -223,4 +248,91 @@ nav {
             }
         }
     }
+    .contact {
+        margin-top: 160px;
+        position: relative;
+        margin-bottom: 100px;
+        height: 500px;
+        button {
+            position: absolute;
+            margin-top: 32px;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            outline: none;
+            color: gray;
+            cursor: pointer;
+            border: 2px solid gray;
+            border-radius: 20px;
+            width: 128px;
+            height: 64px;
+            transition: all 0.3s 0s ease;
+            font-size: 16px;
+            margin: 0 auto;
+            top: 440px;
+            left: 0;
+            bottom: 0px;
+            right: 0px;
+        }
+        button:hover {
+            width: 148px;
+            height: 84px;
+            font-size: 24px;
+            color: white;
+            text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
+        }
+        form {
+            margin-top: 64px;
+            .name {
+                position: relative;
+                width: 960px;
+                display: flex;
+                input {
+                    top: 32px;
+                    position: relative;
+                    height: 30px;
+                    padding-bottom: 8px;
+                    margin-left: 24px;
+                    display: inline-block;
+                    width: 51%;
+                    text-decoration: none;
+                    background: none;
+                    outline: none;
+                    border: 0;
+                    border-bottom: 1px solid gray;
+                    cursor: text;
+                    color: white;
+                }
+            }
+            h2 {
+                display: inline;
+                font-size: 64px;
+                line-height: 1.5;
+                margin: 0;
+                height: 100px;
+                // height: 16px;
+            }
+            .email {
+                input {
+                    bottom: 14px;
+                    position: relative;
+                    height: 30px;
+                    padding-bottom: 8px;
+                    margin-left: 24px;
+                    display: inline-block;
+                    width: 35%;
+                    text-decoration: none;
+                    background: none;
+                    outline: none;
+                    border: 0;
+                    border-bottom: 1px solid gray;
+                    cursor: text;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+footer {
+    height: 120px;
+    margin-top: 320px;
 }

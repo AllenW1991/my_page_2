@@ -29,7 +29,6 @@ body {
 nav {
   z-index: 1;
   position: fixed;
-  top: -50;
   height: 40px;
   width: 100%;
   display: -webkit-box;
@@ -434,4 +433,6 @@ footer {
   height: 120px;
   margin-top: 320px;
 }
-/*# sourceMappingURL=style.css.map */
+
+
+/*# sourceMappingURL=/style.21be07c4.css.map */
