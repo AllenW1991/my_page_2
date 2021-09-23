@@ -97,7 +97,7 @@ nav .banner ul li:hover {
 }
 
 .container .main img {
-  right: 120px;
+  right: 60px;
   bottom: 240px;
   position: absolute;
   -o-object-fit: cover;
@@ -110,6 +110,8 @@ nav .banner ul li:hover {
 }
 
 .container .main h1 {
+  position: relative;
+  top: 180px;
   font-size: 88px;
 }
 

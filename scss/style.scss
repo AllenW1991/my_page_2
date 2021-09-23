@@ -78,7 +78,7 @@ nav {
         line-height: 0.8;
         position: relative;
         img {
-            right: 120px;
+            right: 60px;
             bottom: 240px;
             position: absolute;
             object-fit: cover;
@@ -88,6 +88,8 @@ nav {
             display: none;
         }
         h1 {
+            position: relative;
+            top: 180px;
             font-size: 88px;
         }
 
