@@ -160,7 +160,8 @@ nav .banner ul li:hover {
 .container .main .down {
   font-size: 16px;
   position: absolute;
-  right: 0;
+  left: 25%;
+  margin-top: 200px;
   -webkit-animation: down 2s infinite;
           animation: down 2s infinite;
 }
@@ -192,7 +193,7 @@ nav .banner ul li:hover {
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 48px;
 }
 
@@ -285,12 +286,13 @@ nav .banner ul li:hover {
   position: relative;
   top: 0;
   text-align: left;
-  width: 300px;
+  width: 350px;
   padding: 0 24px;
+  margin-top: 24px;
 }
 
 .container .projects li .project p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .container .projects li .project a {
@@ -308,6 +310,7 @@ nav .banner ul li:hover {
 }
 
 .container .projects .pic_right {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,12 +320,24 @@ nav .banner ul li:hover {
 }
 
 .container .projects .pic_right img {
-  max-width: 520px;
+  max-width: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: grayscale(1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.container .projects .pic_right img:hover {
+  -webkit-filter: saturate(1.2);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .container .projects .pic_left {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,9 +351,20 @@ nav .banner ul li:hover {
 }
 
 .container .projects .pic_left img {
-  max-width: 520px;
+  max-width: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: grayscale(1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.container .projects .pic_left img:hover {
+  -webkit-filter: saturate(1.2);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .container .contact {
@@ -371,9 +397,6 @@ nav .banner ul li:hover {
 }
 
 .container .contact button:hover {
-  width: 148px;
-  height: 84px;
-  font-size: 24px;
   color: white;
   text-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0 200px #ffffff;
 }
